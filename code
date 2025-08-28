@@ -1,1 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chic Press-Ons - Custom Nail Designs</title>
+    <!-- Favicon and Google Fonts -->
+    <link rel="icon" href="https://placehold.co/32x32/1a2b3c/ffffff?text=N" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS for subtle animations and font -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Lighter gray background */
+            color: #334155; /* Dark gray text */
+        }
+        .text-shadow-custom {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
 
+    <!-- Main Container -->
+    <div class="min-h-screen flex flex-col items-center">
+
+        <!-- Navigation Bar -->
+        <nav class="w-full bg-white bg-opacity-90 backdrop-filter backdrop-blur-lg shadow-md fixed top-0 z-50 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo/Brand Name -->
+                    <div class="flex-shrink-0">
+                        <a href="#home" class="text-3xl font-extrabold text-[#F06292] rounded-lg">ChicPress.</a>
+                    </div>
+                    
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#hero" class="text-gray-600 hover:text-[#F06292] transition duration-300 font-medium">Home</a>
+                        <a href="#featured" class="text-gray-600 hover:text-[#F06292] transition duration-300 font-medium">Shop</a>
+                        <a href="#gallery" class="text-gray-600 hover:text-[#F06292] transition duration-300 font-medium">Gallery</a>
+                        <a href="#contact" class="text-gray-600 hover:text-[#F06292] transition duration-300 font-medium">Contact</a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-gray-500 hover:text-[#F06292] focus:outline-none focus:text-[#F06292] transition duration-300">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                    <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#F06292] transition duration-300">Home</a>
+                    <a href="#featured" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#F06292] transition duration-300">Shop</a>
+                    <a href="#gallery" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#F06292] transition duration-300">Gallery</a>
+                    <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:bg-gray-100 hover:text-[#F06292] transition duration-300">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header id="hero" class="relative w-full h-screen flex items-center justify-center p-4">
+            <!-- Background Image Placeholder -->
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://placehold.co/1920x1080/FCE4EC/9C27B0?text=Your+Hero+Image+Here');"></div>
+            <!-- Overlay for better text readability -->
+            <div class="absolute inset-0 bg-black opacity-40"></div>
+            
+            <div class="text-center relative z-10 px-4 py-8 max-w-2xl bg-white bg-opacity-75 rounded-3xl shadow-lg border-2 border-white transform transition-all duration-500 hover:scale-105">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-[#F06292] mb-4 tracking-tight text-shadow-custom">
+                    Unleash Your Inner Chic
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl font-light text-gray-800 mb-8 leading-relaxed">
+                    Customizable, reusable, and stylish press-on nails for every occasion.
+                </p>
+                <a href="#featured" class="bg-[#F06292] text-white py-3 px-8 rounded-full text-lg font-semibold shadow-xl hover:bg-[#E91E63] transform transition-transform duration-300 hover:scale-105">
+                    Shop Our Designs
+                </a>
+            </div>
+        </header>
+
+        <!-- Featured Products Section -->
+        <section id="featured" class="w-full py-20 px-4 bg-gray-50">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-800">Featured Nail Sets</h2>
+                <p class="text-gray-600 mb-12 max-w-3xl mx-auto">Discover our most popular and beautifully crafted designs. Each set is made with high-quality materials for a perfect fit and long-lasting wear.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Featured Product 1 -->
+                    <div class="bg-white p-6 rounded-3xl shadow-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <img src="https://placehold.co/400x400/FFCDD2/333333?text=Product+1" alt="Product 1" class="w-full h-auto rounded-2xl mb-4 object-cover">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Classic French</h3>
+                        <p class="text-gray-600 mb-4">Timeless and elegant, perfect for any look.</p>
+                        <p class="text-2xl font-bold text-[#F06292] mb-4">$25.00</p>
+                        <button class="w-full bg-[#F06292] text-white py-2 rounded-full font-semibold hover:bg-[#E91E63] transition duration-300">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Featured Product 2 -->
+                    <div class="bg-white p-6 rounded-3xl shadow-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <img src="https://placehold.co/400x400/9C27B0/ffffff?text=Product+2" alt="Product 2" class="w-full h-auto rounded-2xl mb-4 object-cover">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Pastel Galaxy</h3>
+                        <p class="text-gray-600 mb-4">A dreamy mix of swirls and cosmic shimmer.</p>
+                        <p class="text-2xl font-bold text-[#F06292] mb-4">$30.00</p>
+                        <button class="w-full bg-[#F06292] text-white py-2 rounded-full font-semibold hover:bg-[#E91E63] transition duration-300">
+                            Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Featured Product 3 -->
+                    <div class="bg-white p-6 rounded-3xl shadow-lg transform transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <img src="https://placehold.co/400x400/4CAF50/ffffff?text=Product+3" alt="Product 3" class="w-full h-auto rounded-2xl mb-4 object-cover">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Modern Abstract</h3>
+                        <p class="text-gray-600 mb-4">Bold lines and vibrant colors for a unique statement.</p>
+                        <p class="text-2xl font-bold text-[#F06292] mb-4">$28.00</p>
+                        <button class="w-full bg-[#F06292] text-white py-2 rounded-full font-semibold hover:bg-[#E91E63] transition duration-300">
+                            Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="w-full py-20 px-4">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-800">Our Gallery</h2>
+                <p class="text-gray-600 mb-12 max-w-3xl mx-auto">
+                    Take a look at some of our stunning designs. Find inspiration for your next set or create your own custom order!
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <img src="https://placehold.co/600x600/FFCDD2/333333?text=Nail+1" alt="Nail Design 1" class="w-full h-auto rounded-xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/600x600/9C27B0/ffffff?text=Nail+2" alt="Nail Design 2" class="w-full h-auto rounded-xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/600x600/4CAF50/ffffff?text=Nail+3" alt="Nail Design 3" class="w-full h-auto rounded-xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/600x600/FF5722/ffffff?text=Nail+4" alt="Nail Design 4" class="w-full h-auto rounded-xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/600x600/607D8B/ffffff?text=Nail+5" alt="Nail Design 5" class="w-full h-auto rounded-xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/600x600/FFC107/ffffff?text=Nail+6" alt="Nail Design 6" class="w-full h-auto rounded-xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/600x600/795548/ffffff?text=Nail+7" alt="Nail Design 7" class="w-full h-auto rounded-xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                    <img src="https://placehold.co/600x600/E91E63/ffffff?text=Nail+8" alt="Nail Design 8" class="w-full h-auto rounded-xl shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="w-full py-20 px-4 bg-gray-100">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-gray-800">About Chic Press-Ons</h2>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    At Chic Press-Ons, we believe in accessible beauty. Our mission is to provide high-quality, handcrafted press-on nails that are not only beautiful but also durable and reusable. We use premium materials and unique designs to help you express your personal style without the salon price tag or commitment.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section & Footer -->
+        <footer id="contact" class="w-full bg-[#F06292] text-white py-12 px-4">
+            <div class="max-w-7xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-lg mb-8 max-w-2xl mx-auto">
+                    Have a question or a custom design idea? We'd love to hear from you!
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-8">
+                    <p class="text-lg">Email: <a href="mailto:your.email@example.com" class="font-semibold underline hover:no-underline">your.email@example.com</a></p>
+                    <p class="text-lg">Instagram: <a href="https://instagram.com/your_handle" target="_blank" class="font-semibold underline hover:no-underline">@your_handle</a></p>
+                </div>
+                <p class="text-sm mt-8 opacity-75">&copy; 2024 Chic Press-Ons. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- JavaScript for Mobile Menu Functionality -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Hide mobile menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
